@@ -17,8 +17,26 @@
     <main>
         <h2>Page Ignaz</h2>
         <p>Nama saya Ignaz Arif Avelino dengan NPM 6182101002</p>
+
+        <p>CLICK this button:</p>
+        <button id="mischief">CLICK</button>
     </main>
 
+    <script>
+        $mischief = document.getElementById("mischief")
+
+        $mischief.addEventListener("click", () => {
+            $main = document.querySelector("main")
+            if ($mischief.innerHTML == "CLICK") {
+                $main.style.backgroundColor = "black"
+                $mischief.innerHTML = "REVERT"
+            }
+            else{
+                $main.style.backgroundColor = "white"
+                $mischief.innerHTML = "CLICK"
+            }
+        })
+    </script>
 </body>
 
 </html>
